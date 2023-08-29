@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x00000000e0000000 to 0x00000000f0000000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3386), pid=15756, tid=14688
+#
+# JRE version:  (11.0.19+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.19+7-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dorg.gradle.internal.worker.tmpdir=C:\Users\bodia\selenideGithub\build\tmp\test\work -Dorg.gradle.native=false --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Xmx512m -Dfile.encoding=windows-1251 -Duser.country=RU -Duser.language=ru -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 2'
+
+Host: AMD Ryzen 5 3500X 6-Core Processor             , 6 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+Time: Mon Aug 28 21:23:02 2023 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.3155) elapsed time: 0.152653 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000217bc473800):  JavaThread "Unknown thread" [_thread_in_vm, id=14688, stack(0x000000cc01c00000,0x000000cc01d00000)]
+
+Stack: [0x000000cc01c00000,0x000000cc01d00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6235aa]
+V  [jvm.dll+0x7b0f89]
+V  [jvm.dll+0x7b2678]
+V  [jvm.dll+0x7b2d53]
+V  [jvm.dll+0x24fe38]
+V  [jvm.dll+0x6208ba]
+V  [jvm.dll+0x614e75]
+V  [jvm.dll+0x30a81c]
+V  [jvm.dll+0x30a6a2]
+V  [jvm.dll+0x30f3b6]
+V  [jvm.dll+0x35597f]
+V  [jvm.dll+0x3553b0]
+V  [jvm.dll+0x2e7788]
+V  [jvm.dll+0x2e88e6]
+V  [jvm.dll+0x78add7]
+V  [jvm.dll+0x78c55f]
+V  [jvm.dll+0x3626d9]
+V  [jvm.dll+0x76dd40]
+V  [jvm.dll+0x3d142f]
+V  [jvm.dll+0x3d37c1]
+C  [jli.dll+0x5227]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000217ba234c20, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000217bc48d000 GCTaskThread "GC Thread#0" [stack: 0x000000cc01d00000,0x000000cc01e00000] [id=17388]
+  0x00000217bc4a0000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000cc01e00000,0x000000cc01f00000] [id=12436]
+  0x00000217bc4a1800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000cc01f00000,0x000000cc02000000] [id=16400]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc05b16fc7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000217bc46f8e0] Heap_lock - owner thread: 0x00000217bc473800
+
+Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: Non-zero based: 0x00000000e0000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.010 Loaded shared library C:\Users\bodia\.jdks\corretto-11.0.19\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff7a7380000 - 0x00007ff7a738d000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\java.exe
+0x00007ffc8d9f0000 - 0x00007ffc8dbe8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffc8cce0000 - 0x00007ffc8cd9f000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffc8b1f0000 - 0x00007ffc8b4e6000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffc8b770000 - 0x00007ffc8b870000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffc76a20000 - 0x00007ffc76a39000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\VCRUNTIME140.dll
+0x00007ffc77660000 - 0x00007ffc77677000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\jli.dll
+0x00007ffc8ca70000 - 0x00007ffc8cc0d000 	C:\Windows\System32\USER32.dll
+0x00007ffc76190000 - 0x00007ffc7642a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffc8cc40000 - 0x00007ffc8ccde000 	C:\Windows\System32\msvcrt.dll
+0x00007ffc8cf30000 - 0x00007ffc8cf5c000 	C:\Windows\System32\GDI32.dll
+0x00007ffc8b870000 - 0x00007ffc8b892000 	C:\Windows\System32\win32u.dll
+0x00007ffc8b0d0000 - 0x00007ffc8b1e5000 	C:\Windows\System32\gdi32full.dll
+0x00007ffc8b560000 - 0x00007ffc8b5fd000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffc8d140000 - 0x00007ffc8d170000 	C:\Windows\System32\IMM32.DLL
+0x00007ffc71520000 - 0x00007ffc715bb000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\msvcp140.dll
+0x00007ffc05820000 - 0x00007ffc063aa000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\server\jvm.dll
+0x00007ffc8cf60000 - 0x00007ffc8d00f000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffc8c110000 - 0x00007ffc8c1ac000 	C:\Windows\System32\sechost.dll
+0x00007ffc8d010000 - 0x00007ffc8d136000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffc8d1d0000 - 0x00007ffc8d1d8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffc86ce0000 - 0x00007ffc86ce9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffc8c830000 - 0x00007ffc8c89b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffc81fe0000 - 0x00007ffc82007000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffc83740000 - 0x00007ffc8374a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffc88eb0000 - 0x00007ffc88ec2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffc7ce40000 - 0x00007ffc7ce50000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\verify.dll
+0x00007ffc84400000 - 0x00007ffc845e4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffc789a0000 - 0x00007ffc789d4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffc8b630000 - 0x00007ffc8b6b2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffc71a60000 - 0x00007ffc71a88000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\java.dll
+0x00007ffc7c730000 - 0x00007ffc7c73a000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\jimage.dll
+0x00007ffc76660000 - 0x00007ffc76678000 	C:\Users\bodia\.jdks\corretto-11.0.19\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\bodia\.jdks\corretto-11.0.19\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\bodia\.jdks\corretto-11.0.19\bin\server
+
+VM Arguments:
+jvm_args: -Dorg.gradle.internal.worker.tmpdir=C:\Users\bodia\selenideGithub\build\tmp\test\work -Dorg.gradle.native=false --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Xmx512m -Dfile.encoding=windows-1251 -Duser.country=RU -Duser.language=ru -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 2'
+java_class_path (initial): C:\\Users\\bodia\\.gradle\\caches\\7.4\\workerMain\\gradle-worker.jar;C:\\Users\\bodia\\selenideGithub\\build\\classes\\java\\test;C:\\Users\\bodia\\selenideGithub\\build\\classes\\java\\main;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-engine\\1.8.1\\e6c63bf990dc88a6527b4ed617b23e47048f07e0\\junit-platform-engine-1.8.1.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-commons\\1.8.1\\1e362cbe6d0f225b066757865e233972557484\\junit-platform-commons-1.8.1.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-engine\\5.8.1\\21b86e08aae2720bbf017703669948be96d1388c\\junit-jupiter-engine-5.8.1.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-api\\5.8.1\\6538b88eb8bf8811bc7b6efb5246f835c15e0bfe\\junit-jupiter-api-5.8.1.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\com.codeborne\\selenide\\6.17.2\\b40b5b35bca52892126ff84683c65c59eabfb19\\selenide-6.17.2.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\com.codeborne\\selenide-core\\6.17.2\\6b1067d8c63ce388499595a0cd46b5d2838eb5e9\\selenide-core-6.17.2.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.opentest4j\\opentest4j\\1.3.0\\152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e\\opentest4j-1.3.0.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-java\\4.11.0\\18cef0adbc08d152da07b234a04f6e8240ce215f\\selenium-java-4.11.0.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-chrome-driver\\4.11.0\\4c44dd3f0402a8b988966a153714af1c69e26d13\\selenium-chrome-driver-4.11.0.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-devtools-v113\\4.11.0\\a0dc1c6e06f210ffa8b189dd607966f105303aff\\selenium-devtools-v113-4.11.0.jar;C:\\Users\\bodia\\.gradle\\caches\\modules-2\\f
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 6                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\swift\runtime-development\usr\bin;C:\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain\usr\bin;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Gradle\bin;C:\Users\bodia\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Azure Data Studio\bin
+USERNAME=bodia
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+TMP=C:\Users\bodia\AppData\Local\Temp
+TEMP=C:\Users\bodia\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+OS uptime: 0 days 11:49 hours
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 23 model 113 stepping 0 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 16334M (572M free)
+TotalPageFile size 30539M (AvailPageFile size 221M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 55M, peak: 311M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.19+7-LTS) for windows-amd64 JRE (11.0.19+7-LTS), built on Apr 13 2023 22:56:25 by "Administrator" with MS VC++ 15.9 (VS2017)
+
+END.
